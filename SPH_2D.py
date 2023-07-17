@@ -46,7 +46,7 @@ NORMALIZATION_VISCOUS_FORCE = (
 
 
 def main():
-    n_particles = 1
+    n_particles = 0
 
     positions = np.zeros((n_particles, 2))
     velocities = np.zeros_like(positions)
@@ -131,7 +131,7 @@ def main():
         positions[out_of_top_boundary, 1] = DOMAIN_Y_LIM[1]
 
         if iter & PLOT_EVERY == 0:
-
+            pass
             # print(positions[:, 0], positions[:, 1])
             # plt.scatter(
             #     positions[:, 0],
