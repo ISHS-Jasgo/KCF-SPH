@@ -1,3 +1,5 @@
+import math
+
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import neighbors
@@ -129,6 +131,9 @@ def main():
 
         velocities[out_of_top_boundary, 1] *= DAMPING_COEFFICIENT
         positions[out_of_top_boundary, 1] = DOMAIN_Y_LIM[1]
+
+        for force in forces:
+            print(math.sqrt(force[0]**2 + force[1]**2))
 
         if iter & PLOT_EVERY == 0:
             pass
